@@ -145,27 +145,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lcJ-3j-VsO">
                                 <rect key="frame" x="32" y="690" width="329" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBn-Ye-KHB" userLabel="refresh">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBn-Ye-KHB" userLabel="refresh">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="7UQ-Cg-kRs"/>
-                                            <constraint firstAttribute="width" constant="64" id="pK9-95-xRA"/>
+                                            <constraint firstAttribute="width" secondItem="lBn-Ye-KHB" secondAttribute="height" multiplier="1:1" id="Xca-JC-eXP"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="refresh"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="refresh"/>
+                                        </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkC-qc-6PD">
                                         <rect key="frame" x="80" y="0.0" width="249" height="64"/>
                                         <color key="backgroundColor" name="Green"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="wjp-lG-j0P"/>
-                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Show Punchline" subtitle="">
                                             <fontDescription key="titleFontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
@@ -184,6 +184,9 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="gEX-Sx-8vA"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -208,7 +211,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="refresh" width="64" height="64"/>
+        <image name="refresh" width="192" height="192"/>
         <namedColor name="GrayBackground">
             <color red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
